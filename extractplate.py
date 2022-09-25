@@ -68,7 +68,7 @@ result = reader.readtext(cropped_img)
 
 text = result[0][-2]
 font = cv2.FONT_HERSHEY_SIMPLEX
-res = cv2.putText(fhandle, text=text, org=(approx[0][0][1], approx[1][0][1]), fontFace=font, fontScale=1, color=(0,400,0), thickness=2, lineType=cv2.LINE_AA)
-res = cv2.rectangle(fhandle, tuple(approx[0][0]), tuple(approx[2][0]), (0,400,0),3)
+res = cv2.putText(fhandle, text=text, org=(approx[0][0][1], approx[1][0][1]), fontFace=font, fontScale=1, color=(255, 0, 0), thickness=2, lineType=cv2.LINE_AA)
+res = cv2.rectangle(fhandle, tuple(approx[0][0]), tuple(approx[2][0]), (255, 0, 0),3)
 pl.imshow(cv2.cvtColor(res, cv2.COLOR_BGR2RGB))
 pl.show()
